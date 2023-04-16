@@ -1,0 +1,47 @@
+Application Property Information:
+
+server.port=9090  -------------------------------------------------------------------------------------> (Put the Unique port number  )
+spring.datasource.url=jdbc:mysql://localhost:3306/doctor_management---------------->(Create database name is doctor_management)
+spring.datasource.username=root  ---------------------------------------------------------------->(Put your mysql server username)
+spring.datasource.password=admin--------------------------------------------------------------->(Put your mysql server password)  
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL55Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.mvc.pathmatch.matching-strategy=ant-path-matcher
+================================================================
+swagger url:-
+http://localhost:9090/swagger-ui.html
+========================================
+Doctor table data:--
+
+  d_id  d_name       city_c_id  email              ph_no       
+------  -----------  ---------  -----------------  ------------
+    15  Borun                3  borun@gmail.com    8776543217  
+    16  Mitali               3  mitali@gmail.com   8966543217  
+    17  Suman                2  suman@gmail.com    8966543217  
+    18  Ramakrishna          1  krishna@gmail.com  9466543267  
+====================================================
+City table Data:
+
+  c_id  name       
+------  -----------
+     1  Delhi      
+     2  Noida      
+     3  Faridabad  
+=============================================
+Speciality table data:
+
+symptom_id  speciality   symptom            d_id  
+----------  -----------  ---------------  --------
+         4  ENT          Ear pain               16
+         5  Dermatology  Skin infection         18
+         6  Dermatology  skin burn              18
+         7  Gynecology   Dysmenorrhea       (NULL)
+         8  Orthopedic   Tissue injuries        17
+         9  Orthopedic   Backpain               17
+        10  Orthopedic   Arthritis              17
+==============================================================================
+Patient table data:
+    id  email             p_name  ph_no       sympton         city_c_id  doctor_d_id  
+------  ----------------  ------  ----------  --------------  ---------  -------------
+    19  prabin@gmail.com  Prabin  9584671234  Skin infection          1             18
